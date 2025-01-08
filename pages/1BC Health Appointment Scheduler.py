@@ -8,7 +8,7 @@ import pandas
 #set up my database
 
 def get_db_connecton():
-    conn = sqlite3.Connection("bc_home_care.db")
+    conn = sqlite3.Connection("home_care.db",)
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     cursor.execute("PRAGMA foreign_keys = ON;")
@@ -77,6 +77,8 @@ CREATE TABLE IF NOT EXISTS  feedback(
 ''' )
     conn.commit()
     conn.close()
+
+#initialise_database()
 
 #initialise database, you do this once and uncomment # the initialise button
 if "patient_id"  not in st.session_state:
@@ -431,7 +433,7 @@ with tab4:
         ],
     }
 
-    # Streamlit app
+    # write the streamlit folium code for the map
     st.title("Home and Community care Map of BC")
 
     # Dropdown for selecting a health authority
@@ -477,7 +479,7 @@ with tab5:
                            INNER JOIN services s
                            ON p.patient_id = s.patient_id
                            INNER JOIN appointments a
-                           ON s.service_id = a.appointment_id
+                           ON s.service_id = a.service_id
                            ;'''
             
             cursor.execute(query)
@@ -523,11 +525,28 @@ with tab5:
     #cursor = conn.cursor()
 
     #Ensure the patients table is empty
-    #cursor.execute("DELETE FROM services;")
+    #cursor.execute("DELETE FROM patients;")
 
     # Reset auto-increment counter for the patients table
-    #cursor.execute("DELETE FROM SQLITE_SEQUENCE WHERE name='services';")
+    #cursor.execute("DELETE FROM SQLITE_SEQUENCE WHERE name='patients';")
 
     #conn.commit()
     #conn.close()
+
 #reset_auto_increment()
+
+
+#def drop():
+    #conn = get_db_connecton()
+    #cursor = conn.cursor()
+
+    #Ensure the patients table is empty
+    #cursor.execute("DROP TABLE IF EXISTS services")
+
+    # Reset auto-increment counter for the patients table
+    #cursor.execute("DELETE FROM SQLITE_SEQUENCE WHERE name='patients';")
+
+    #conn.commit()
+    #conn.close()
+
+#drop()

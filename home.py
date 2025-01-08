@@ -1,34 +1,30 @@
 import streamlit as st
+
+from streamlit_lottie import st_lottie
+
 st.logo("images/obalogop.jpg")
-st.title("this is my home page")
+st.title("welcome to lawrence projects")
+st.caption("A unique portflio")
+st.image("images/data anime.gif", width= 250)
 
-st.markdown(" ### Project 1 : British Colmbia Home Care Schedular (A database project)" )
-st.title("Welcome to the Project Hub!")
-st.write("Explore our innovative tools and applications designed to simplify your workflows.")
 
-# Section: Project Overview
-st.header("Explore Our Projes")
 
-# Project 1: Health Scheduler
-st.subheader("Health Scheduler")
-st.write("A centralized platform for booking home and community care appointments.")
-if st.button("Go to Health Scheduler"):
-    st.experimental_set_query_params(page="Health_Scheduler")
+st.markdown("# projects")
+st.info("use the widget at the left to access all projects")
 
-# Title and Welcome Message
-st.title("Welcome to the Project Hub!")
-st.write("""
-Explore our innovative tools and applications designed 
-to simplify your workflows. Select a project below:
-""")
-
-# Navigation Buttons with Query Parameters
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
-    if st.button("Health Scheduler"):
-        st.query_params.update({"page": "BC_Health_Appointment_Scheduler.py"})
+    st.markdown("#### [1. bc home schedular](http://localhost:8501/BC_Health_Appointment_Scheduler)")
+    st.image("images/beautiful columbians.webp")
+
 
 with col2:
-    if st.button("Task Manager"):
-        st.query_params.update({"page": "Task_Manager"})
+    st.markdown("#### [2. 60 seconds CSV Analysis](http://localhost:8501/60sec_CSV_analysis)")
+    st.image("images/friendly humainoid csv.webp")
+   
+col3, col4 = st.columns(2)
+
+with col3:
+    st.markdown("#### [3. Canada mill feed predictor(In Progress) ](http://localhost:8501/mill_feed_predictor)")
+    st.image("images/wheat mill production.webp")
