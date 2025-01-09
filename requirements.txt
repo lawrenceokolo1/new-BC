@@ -78,3 +78,4 @@ xyzservices==2024.9.0
 ydata-profiling
 joblib
 scikit-learn
+setuptools
