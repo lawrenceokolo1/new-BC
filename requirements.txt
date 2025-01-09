@@ -79,4 +79,3 @@ ydata-profiling
 joblib
 scikit-learn
 setuptools
-pkg_resources
