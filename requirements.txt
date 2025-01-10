@@ -5,7 +5,6 @@ streamlit_pandas_profiling
 st_folium
 streamlit 
 sklearn
-=======
 altair==5.5.0
 annotated-types==0.7.0
 attrs==24.3.0
