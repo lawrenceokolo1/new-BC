@@ -1,10 +1,3 @@
-streamlit-folium
-folium
-ydata_profiling
-streamlit_pandas_profiling
-st-folium
-streamlit 
-sklearn
 altair==5.5.0
 annotated-types==0.7.0
 attrs==24.3.0
