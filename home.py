@@ -14,12 +14,12 @@ st.info("use the widget at the left to access all projects")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("#### [1. bc home schedular](http://localhost:8501/BC_Health_Appointment_Scheduler)")
+    st.markdown("#### [1. bc home schedular](https://lawrence-project.streamlit.app/BC_Health_Appointment_Scheduler)")
     st.image("images/beautiful columbians.webp")
 
 
 with col2:
-    st.markdown("#### [2. 60 seconds CSV Analysis](http://localhost:8501/60sec_CSV_analysis)")
+    st.markdown("#### [2. 60 seconds CSV Analysis](https://lawrence-project.streamlit.app/60sec_CSV_analysis)")
     st.image("images/friendly humainoid csv.webp")
    
 col3, col4 = st.columns(2)
