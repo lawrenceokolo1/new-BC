@@ -1,8 +1,8 @@
 #import libraries
 import streamlit as st
 import sqlite3
-from streamlit_folium import st_folium
 import folium
+from streamlit_folium import st_folium
 import pandas
 
 #set up my database

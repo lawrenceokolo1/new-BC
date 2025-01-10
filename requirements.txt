@@ -1,0 +1,7 @@
+streamlit-folium
+folium
+ydata_profiling
+streamlit_pandas_profiling
+st_folium
+streamlit 
+sklearn
