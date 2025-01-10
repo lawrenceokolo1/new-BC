@@ -6,6 +6,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
+st.title("Real Time Bed Management(In Progress)")
+
 iris_df = pd.read_csv("csv files/iris.csv")
 print(iris_df.head())
 
