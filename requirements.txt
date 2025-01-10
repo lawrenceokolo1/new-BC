@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 streamlit-folium
 folium
 ydata_profiling
@@ -88,4 +87,4 @@ ydata-profiling
 joblib
 scikit-learn
 setuptools
->>>>>>> c87e7d595863e6b5512a593ef416a9a633b544e2
+
