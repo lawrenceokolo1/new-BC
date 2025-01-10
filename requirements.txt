@@ -2,7 +2,7 @@ streamlit-folium
 folium
 ydata_profiling
 streamlit_pandas_profiling
-st_folium
+st-folium
 streamlit 
 sklearn
 altair==5.5.0
