@@ -25,5 +25,5 @@ with col2:
 col3, col4 = st.columns(2)
 
 with col3:
-    st.markdown("#### [3. Canada mill feed predictor(In Progress) ](http://localhost:8501/mill_feed_predictor)")
+    st.markdown("#### [3. Diabetics predictor(In Progress) ](https://lawrence-project.streamlit.app/Diabetes_Predictor_(A_Machine_leaning_modelling_technique))")
     st.image("images/wheat mill production.webp")
