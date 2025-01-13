@@ -186,7 +186,7 @@ st.markdown(''' The importance of a user-friendly, centralized home and communit
 
 
 
-with tab1:
+#with tab1:
 st.header("Patient Details")
         
         # Patient form inside Tab 1
