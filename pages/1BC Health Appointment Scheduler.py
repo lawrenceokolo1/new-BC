@@ -238,58 +238,61 @@ with st.form(key = "patient_form", clear_on_submit=True):
             st.write("Current Patient ID:", st.session_state.patient_id)
             
                  
-with tab2:
+#with tab2:
 
-    if st.session_state.patient_id:
-        st.header("please select and save service below")
-
-
-        services = {
+if st.session_state.patient_id:
+    st.header("please select and save service below")
 
 
-            "community nursing" : {
-            "description" : "Community nursing services are provided by a licensed nursing professional to clients in the community who require acute, chronic, palliative or rehabilitative support. Services include assessment and nursing interventions such as education, wound care, medication management, chronic disease management, care management, post-surgical care and palliative care. Generally, community nursing services will be provided on a short-term basis and the community nurses will assist you and your family to be confident in taking over your care at home.", 
-            "links":"https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/care-options-and-cost/community-nursing"
-            },
-             "community rehabilitation" : {
-            "description" : "Community rehabilitation services are provided by a licensed physical therapist or occupational therapist to clients who require acute, chronic, palliative or rehabilitative support. The main goals of rehabilitation therapy are to help improve or maintain physical and functional abilities and to provide assessment and treatment to ensure a client’s home is suitably arranged for their needs and safety. Generally, community rehabilitation services will be provided on a short-term basis and the community rehabilitation therapists will assist you and your family to be confident in taking over your care at home.Community rehabilitation services, which include physical therapy and occupational therapy, may be provided in a variety of settings such as clinics, the client’s home, assisted living residences, family care homes, group homes, or other community settings.  ", 
-            "links":"https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/care-options-and-cost/community-rehabilitation"
-            },
-             "Adult Day Services" : {
-            "description" : "Adult day services assist seniors and adults with disabilities to continue to live in their own homes by providing supportive group programs and activities in the community.Clients receiving adult day services travel to a location in their community usually 1-2 days per week where they may receive a variety of services, including: personal assistance;health care services including nursing and/or rehabilitation services; an organized program of therapeutic social and recreational activities in a protective group setting; health education and promotion, nutrition and bathing programs, blood pressure and podiatry clinics, telephone checking, and counselling; and caregiver support, including respite, activities such as caregiver support groups, information and education programs.", 
-            "links":"https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/care-options-and-cost/adult-day-services"
-             }, 
+    services = {
 
-            "Home Support" : {
-            "description" : "Home support services help you to remain independent and to live in your own home as long as possible.Home support services are direct care services provided by community health workers to clients who require personal assistance with activities of daily living, such as: mobility; nutrition;lifts and transfers; bathing and dressing; cueing (providing prompts to assist with the completion of tasks); and grooming and toileting. Home support services may also include safety maintenance activities as a supplement to personal assistance when appropriate. These activities may include clean-up, laundry of soiled bedding or clothing, and meal preparation. In addition, community health workers may perform some specific nursing and rehabilitation tasks that have been delegated by health care professionals.", 
-            "links":"https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/care-options-and-cost/home-support"
-            },  
-            "End Of Life Care" : {
-            "description" : "End-of-life care is supportive and compassionate care that focuses on comfort,quality of life, respect for personal health care treatment decisions, support for the family, and psychological, cultural and spiritual concerns for dying people and their families. Palliative care is specialized medical care for people with serious illness – whatever the diagnosis. Care can be provided wherever the client is living, whether at home, in hospice, an assisted living residence or a long-term care home. End-of-life and palliative care services aim to preserve an individual’s comfort, dignity and quality of life as their needs change, and to offer on-going support for family and friends. These services include the following: care co-ordination and consultation, pain and symptom management, community nursing services, community rehabilitation services, home support, respite for the caregiver and hospice care.", 
-            "links":"https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/care-options-and-cost/end-of-life-care"
-            }, 
+
+        "community nursing" : {
+        "description" : "Community nursing services are provided by a licensed nursing professional to clients in the community who require acute, chronic, palliative or rehabilitative support. Services include assessment and nursing interventions such as education, wound care, medication management, chronic disease management, care management, post-surgical care and palliative care. Generally, community nursing services will be provided on a short-term basis and the community nurses will assist you and your family to be confident in taking over your care at home.", 
+        "links":"https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/care-options-and-cost/community-nursing"
+        },
+        "community rehabilitation" : {
+        "description" : "Community rehabilitation services are provided by a licensed physical therapist or occupational therapist to clients who require acute, chronic, palliative or rehabilitative support. The main goals of rehabilitation therapy are to help improve or maintain physical and functional abilities and to provide assessment and treatment to ensure a client’s home is suitably arranged for their needs and safety. Generally, community rehabilitation services will be provided on a short-term basis and the community rehabilitation therapists will assist you and your family to be confident in taking over your care at home.Community rehabilitation services, which include physical therapy and occupational therapy, may be provided in a variety of settings such as clinics, the client’s home, assisted living residences, family care homes, group homes, or other community settings.  ", 
+        "links":"https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/care-options-and-cost/community-rehabilitation"
+        },
+        "Adult Day Services" : {
+        "description" : "Adult day services assist seniors and adults with disabilities to continue to live in their own homes by providing supportive group programs and activities in the community.Clients receiving adult day services travel to a location in their community usually 1-2 days per week where they may receive a variety of services, including: personal assistance;health care services including nursing and/or rehabilitation services; an organized program of therapeutic social and recreational activities in a protective group setting; health education and promotion, nutrition and bathing programs, blood pressure and podiatry clinics, telephone checking, and counselling; and caregiver support, including respite, activities such as caregiver support groups, information and education programs.", 
+        "links":"https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/care-options-and-cost/adult-day-services"
+        }, 
+
+        "Home Support" : {
+        "description" : "Home support services help you to remain independent and to live in your own home as long as possible.Home support services are direct care services provided by community health workers to clients who require personal assistance with activities of daily living, such as: mobility; nutrition;lifts and transfers; bathing and dressing; cueing (providing prompts to assist with the completion of tasks); and grooming and toileting. Home support services may also include safety maintenance activities as a supplement to personal assistance when appropriate. These activities may include clean-up, laundry of soiled bedding or clothing, and meal preparation. In addition, community health workers may perform some specific nursing and rehabilitation tasks that have been delegated by health care professionals.", 
+        "links":"https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/care-options-and-cost/home-support"
+        },  
+        "End Of Life Care" : {
+        "description" : "End-of-life care is supportive and compassionate care that focuses on comfort,quality of life, respect for personal health care treatment decisions, support for the family, and psychological, cultural and spiritual concerns for dying people and their families. Palliative care is specialized medical care for people with serious illness – whatever the diagnosis. Care can be provided wherever the client is living, whether at home, in hospice, an assisted living residence or a long-term care home. End-of-life and palliative care services aim to preserve an individual’s comfort, dignity and quality of life as their needs change, and to offer on-going support for family and friends. These services include the following: care co-ordination and consultation, pain and symptom management, community nursing services, community rehabilitation services, home support, respite for the caregiver and hospice care.", 
+        "links":"https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care/care-options-and-cost/end-of-life-care"
+        }, 
         
-            }
+        }
         
    
-        selected_services = st.selectbox(label= "select services ",options= list(services.keys()))
-        if selected_services:
+    selected_services = st.selectbox(label= "select services ",options= list(services.keys()))
+    if selected_services:
+        
+        
 
-                    st.subheader(selected_services)
-                    st.write(services[selected_services]["description"])
-                    st.markdown(f"[Learn more about {selected_services} from HealthBC]({services[selected_services]['links']})", unsafe_allow_html=True)
+        st.subheader(selected_services)
+        st.write(services[selected_services]["description"])
+        st.markdown(f"[Learn more about {selected_services} from HealthBC]({services[selected_services]['links']})", unsafe_allow_html=True)
 
 
-        if selected_services and st.button("Save Service Here!"):
-            result = save_selected_services(st.session_state.patient_id, selected_services)
-            if result is True:
-                st.success("service Saved! go to Booking ")
-            else:
-                st.error(f"An error occurred: {result[1]}")
+    if selected_services and st.button("Save Service Here!"):
+        result = save_selected_services(st.session_state.patient_id, selected_services)
+        if result is True:
+            st.success("service Saved! go to Booking ")
+        else:
+            
+            st.error(f"An error occurred: {result[1]}")
     
 
-    else:
-        st.warning("Please fill in Patient Details to select or update your services.")    
+else:
+    st.warning("Please fill in Patient Details to select or update your services.")    
                     
                   
 
