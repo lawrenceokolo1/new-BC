@@ -299,31 +299,32 @@ if selected_services and st.button("Save Service Here!"):
                   
 
 
-with tab3:
-    if st.session_state.patient_id:
-        st.header("book appointment")
+#with tab3:
+#if st.session_state.patient_id:
+st.header("book appointment")
 
-        with st.form(key = "appointment_form"):
-            health_authority = st.selectbox("select your health authority",("interior health", "Fraser Health","Vancouver Coastal Health", "Island Health", "Northern Health"  ))
-            appointment_date = st.date_input("select appointment date")
-            appointment_time = st.time_input("select appointment time")
+with st.form(key = "appointment_form"):
+    
+    health_authority = st.selectbox("select your health authority",("interior health", "Fraser Health","Vancouver Coastal Health", "Island Health", "Northern Health"  ))
+    appointment_date = st.date_input("select appointment date")
+    appointment_time = st.time_input("select appointment time")
             
-            save= st.form_submit_button("save appointment")
+    save= st.form_submit_button("save appointment")
 
-            if save:
-                if not health_authority or not appointment_date or not appointment_time:
-                    st.write("please select the feilds")
-                else:
-                    if not selected_services:
-                        st.error("please save your selected service")
-                    else:                    
-                        service_id = get_service_id(selected_services)
-                        save_appointment(st.session_state.patient_id,service_id, health_authority, str(appointment_date), str(appointment_time))
-                        st.snow()
-                        st.success("successfully booked an appointment!")
+    if save:
+        if not health_authority or not appointment_date or not appointment_time:
+            st.write("please select the feilds")
+        else:
+            if not selected_services:
+                st.error("please save your selected service")
+            else:                    
+                service_id = get_service_id(selected_services)
+                save_appointment(st.session_state.patient_id,service_id, health_authority, str(appointment_date), str(appointment_time))
+                st.snow()
+                st.success("successfully booked an appointment!")
                     
-    else:
-        st.warning("Please fill in Patient Details to select or update your appointment.")
+    #else:
+        #st.warning("Please fill in Patient Details to select or update your appointment.")
 
 
 
