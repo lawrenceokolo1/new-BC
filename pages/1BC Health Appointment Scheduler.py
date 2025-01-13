@@ -510,11 +510,15 @@ if st.button("Show appointment in dataframe "):
     data = print_table()
 
     if data is not None and not data.empty:
+        
+        
 
-    st.dataframe(data)  # Display data as an interactive table
+        st.dataframe(data)  # Display data as an interactive table
     else:
+        
+        
 
-    st.info("No appointment data found.")
+        st.info("No appointment data found.")
 
 
 
