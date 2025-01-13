@@ -472,49 +472,49 @@ if selected_authority:
 st.write(f"Showing Home Health locations under: {selected_authority}")
 st_folium(m, width=725, height=500)
 
-with tab5:
-    st.header("BC HOME CARE DATABASE ")
-    st.text(" The Database tab demonstrates how we queried our tables to extract important information. This database is designed to facilitate analysis of the data provided by patients. By leveraging this data, we can apply machine learning techniques to build models that identify the most sought-after services. This insight will allow us to focus on enhancing expertise in those areas of specialization, ensuring better resource allocation and improved service delivery.  ")
-    st.markdown("##### click button below to view interactive database ")
+#with tab5:
+st.header("BC HOME CARE DATABASE ")
+st.text(" The Database tab demonstrates how we queried our tables to extract important information. This database is designed to facilitate analysis of the data provided by patients. By leveraging this data, we can apply machine learning techniques to build models that identify the most sought-after services. This insight will allow us to focus on enhancing expertise in those areas of specialization, ensuring better resource allocation and improved service delivery.  ")
+st.markdown("##### click button below to view interactive database ")
   
-    def print_table():
-        conn = get_db_connecton()
-        cursor = conn.cursor()
+def print_table():
+    conn = get_db_connecton()
+    cursor = conn.cursor()
 
-        try:
-            # Query all rows and columns from the `services` table
-            query = '''SELECT patient_name, patient_email, service_name, health_authority, appointment_date, appointment_time 
-                           FROM patients p
-                           INNER JOIN services s
-                           ON p.patient_id = s.patient_id
-                           INNER JOIN appointments a
-                           ON s.service_id = a.service_id
-                           ;'''
+    try:
+        # Query all rows and columns from the `services` table
+        query = '''SELECT patient_name, patient_email, service_name, health_authority, appointment_date, appointment_time 
+                        FROM patients p
+                        INNER JOIN services s
+                        ON p.patient_id = s.patient_id
+                        INNER JOIN appointments a
+                        ON s.service_id = a.service_id
+                        ;'''
             
-            cursor.execute(query)
-            rows = cursor.fetchall()
+        cursor.execute(query)
+        rows = cursor.fetchall()
             
             
-            column_names = [description[0] for description in cursor.description]
-            df = pandas.DataFrame(rows, columns=column_names)
-            return df
-        except sqlite3.Error as e:
-            st.error(f"An error occurred while fetching data: {e}")
-            return None
+        column_names = [description[0] for description in cursor.description]
+        df = pandas.DataFrame(rows, columns=column_names)
+        return df
+    except sqlite3.Error as e:
+        st.error(f"An error occurred while fetching data: {e}")
+        return None
 
-        finally:
-            conn.close()
+    finally:
+        conn.close()
           
 
-    if st.button("Show appointment in dataframe "):
-       data = print_table()
+if st.button("Show appointment in dataframe "):
+    data = print_table()
 
-       if data is not None and not data.empty:
+    if data is not None and not data.empty:
 
-        st.dataframe(data)  # Display data as an interactive table
-       else:
+    st.dataframe(data)  # Display data as an interactive table
+    else:
 
-        st.info("No appointment data found.")
+    st.info("No appointment data found.")
 
 
 
