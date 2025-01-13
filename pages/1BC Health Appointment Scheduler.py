@@ -166,17 +166,15 @@ st.title("British Columbia Home and Community Care App For Seniors ")
 st.caption("by lawrence okolo")
 st.image("images/beautiful columbians.webp")
 
-tab0 = st.columns(1)
+#tab0 = st.columns(1)
 tab1 = st.columns(1) 
 tab2 = st.columns(1)
 tab3 = st.columns(1)
 tab4 = st.columns(1)
 tab5 = st.columns(1)
-
-with tab0:
-    st.header("Overview ")
-    st.subheader('A centralized booking app for seniors')
-    st.markdown(''' The importance of a user-friendly, centralized home and community care app for seniors cannot be overstated. 
+st.header("Overview ")
+st.subheader('A centralized booking app for seniors')
+st.markdown(''' The importance of a user-friendly, centralized home and community care app for seniors cannot be overstated. 
                 This web application aims to streamline the appointment booking process by reducing reliance on paper-based systems and significantly speeding up the time it takes to book an appointment. 
                 The app consists of five main tabs:  **Overview**,  **Patient Details**,  **Services**, **Booking**, **Health Authorities**, **Database**. 
                 All major credit and inspiration for developing this app goes to [HealthBC](https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care)  
