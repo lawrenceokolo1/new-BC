@@ -166,8 +166,12 @@ st.title("British Columbia Home and Community Care App For Seniors ")
 st.caption("by lawrence okolo")
 st.image("images/beautiful columbians.webp")
 
-tab0, tab1, tab2 = st.columns(1)
-tab3, tab4, tab5 = st.tabs([ "Booking", "Health Authorities Map", "Database" ])
+tab0 = st.columns(1)
+tab1 = st.columns(1) 
+tab2 = st.columns(1)
+tab3 = st.columns(1)
+tab4 = st.columns(1)
+tab5 = st.columns(1)
 
 with tab0:
     st.header("Overview ")
@@ -178,14 +182,7 @@ with tab0:
                 All major credit and inspiration for developing this app goes to [HealthBC](https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care)  
                 Feel free to explore the app and test its functionality by filling out the forms with sample or fake details. Please ensure that you save each step of the process to see how the database operates.''')
     
-    st.markdown("#### Home Care ER Diagram")
-    st.text(''' The entity-relationship diagram (ERD) illustrates how the tables in our database are interconnected. It plays a crucial role in designing the database by defining the relationships between different entities. This structure is essential for setting up the database to enable efficient querying and retrieving the desired results seamlessly.''')
-    st.image("images/homecare.drawio.png", caption="Entity relational diagram of the Home Care Database")
-    
-    st.markdown("### Interactive Health Map in the  4th tab ")
-    st.text(''' The Interactive Health Map in the fourth tab of the app provides a visual representation of home care locations under different health authorities across British Columbia (BC). This feature is designed to make it easier for users, especially seniors, to locate nearby home care services and understand which health authority governs their area.   ''')
-    st.image("images/map.png", caption="interactive map of the home cares under the 5 health authorities in BC")
-
+   
 
 
 
