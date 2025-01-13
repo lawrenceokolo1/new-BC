@@ -332,7 +332,7 @@ with st.form(key = "appointment_form"):
 
 
 
-with tab4:
+#with tab4:
 health_authorities = {
 
 
