@@ -167,11 +167,11 @@ st.caption("by lawrence okolo")
 st.image("images/beautiful columbians.webp")
 
 #tab0 = st.columns(1)
-tab1,tab2 = st.columns(2) 
+#tab1,tab2 = st.columns(2) 
 #tab2 = st.columns(1)
-tab3 = st.columns(1)
-tab4 = st.columns(1)
-tab5 = st.columns(1)
+#tab3 = st.columns(1)
+#tab4 = st.columns(1)
+#tab5 = st.columns(1)
 st.header("Overview ")
 st.subheader('A centralized booking app for seniors')
 st.markdown(''' The importance of a user-friendly, centralized home and community care app for seniors cannot be overstated. 
@@ -187,46 +187,53 @@ st.markdown(''' The importance of a user-friendly, centralized home and communit
 
 
 with tab1:
-    st.header("Patient Details")
+st.header("Patient Details")
         
         # Patient form inside Tab 1
-    with st.form(key = "patient_form", clear_on_submit=True):
-        email = st.text_input("Enter your email:")
-        name = st.text_input("Name")
-        age = st.number_input("Age", min_value=19)
-        phone = st.text_input("Phone Number")
-        street_address = st.text_input("Street Address")
-        city = st.text_input("City")
-        province = st.selectbox("Select your province", ("BC", "AB", "SC", "ON", "QC"))
+with st.form(key = "patient_form", clear_on_submit=True):
+    email = st.text_input("Enter your email:")
+    name = st.text_input("Name")
+    age = st.number_input("Age", min_value=19)
+    phone = st.text_input("Phone Number")
+    street_address = st.text_input("Street Address")
+    city = st.text_input("City")
+    province = st.selectbox("Select your province", ("BC", "AB", "SC", "ON", "QC"))
 
             
             
         # Submit button for form
-        save = st.form_submit_button("Save and Continue")
+    save = st.form_submit_button("Save and Continue")
+    
+        
 
 
-        if save:
+    if save:
+        
 
             # Step 1: Validate form fields
-            if not email or not name or not phone or not street_address or not city or province == "": 
-
-
-                st.error("Please fill out all required fields.")
+        if not email or not name or not phone or not street_address or not city or province == "":
+            
+        
+            st.error("Please fill out all required fields.")
+        
 
     
-            else: 
+        else:
+            
+            
                  # Step 2: Check if patient already exists
-                 existing_patient = check_patient_exists(email)
+            existing_patient = check_patient_exists(email)
         
-                 if existing_patient:
+            if existing_patient:
+                
                     # Notify user if patient already exists
-                    st.info("You already have an account. Proceed to Services.")
-                    st.session_state.patient_id = existing_patient["patient_id"]
-                 else:
-                    save_patient_details(name, age, email, phone, street_address, city, province)
-                    new_patient = check_patient_exists(email)
-                    st.session_state.patient_id = new_patient["patient_id"]
-                    st.success("successfully registered, select and save service")
+                st.info("You already have an account. Proceed to Services.")
+                st.session_state.patient_id = existing_patient["patient_id"]
+            else:
+                save_patient_details(name, age, email, phone, street_address, city, province)
+                new_patient = check_patient_exists(email)
+                st.session_state.patient_id = new_patient["patient_id"]
+                st.success("successfully registered, select and save service")
                 
             st.write("Current Patient ID:", st.session_state.patient_id)
             
