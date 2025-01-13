@@ -174,11 +174,11 @@ st.image("images/beautiful columbians.webp")
 #tab5 = st.columns(1)
 st.header("Overview ")
 st.subheader('A centralized booking app for seniors')
-st.markdown(''' The importance of a user-friendly, centralized home and community care app for seniors cannot be overstated. 
+st.markdown(''' 
                 This web application aims to streamline the appointment booking process by reducing reliance on paper-based systems and significantly speeding up the time it takes to book an appointment. 
-                The app consists of five main tabs:  **Overview**,  **Patient Details**,  **Services**, **Booking**, **Health Authorities**, **Database**. 
+                The app consists of five main tabs:  **Overview**,  **Patient Details**,  **Services**, **Booking**, **Health Authorities map**, **Database**. 
                 All major credit and inspiration for developing this app goes to [HealthBC](https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care)  
-                Feel free to explore the app and test its functionality by filling out the forms with sample or fake details. Please ensure that you save each step of the process to see how the database operates.''')
+               .''')
     
    
 
@@ -187,7 +187,7 @@ st.markdown(''' The importance of a user-friendly, centralized home and communit
 
 
 #with tab1:
-st.header("Patient Details")
+st.title("PATIENT DETAILS")
         
         # Patient form inside Tab 1
 with st.form(key = "patient_form", clear_on_submit=True):
@@ -245,7 +245,7 @@ with st.form(key = "patient_form", clear_on_submit=True):
 
 
 
-st.header("please select and save service below")
+st.title("SELECT SERVICE BELOW")
 
 
 services = {
@@ -286,7 +286,7 @@ if selected_services:
     st.markdown(f"[Learn more about {selected_services} from HealthBC]({services[selected_services]['links']})", unsafe_allow_html=True)
 
 
-if selected_services and st.button("Save Service Here!"):
+if selected_services and st.button("SAVE SERVICE HERE!"):
     result = save_selected_services(st.session_state.patient_id, selected_services)
     if result is True:
         st.success("service Saved! go to Booking ")
@@ -301,7 +301,7 @@ if selected_services and st.button("Save Service Here!"):
 
 #with tab3:
 #if st.session_state.patient_id:
-st.header("book appointment")
+st.title ("BOOK APPOINTMENT")
 
 with st.form(key = "appointment_form"):
     
