@@ -166,7 +166,8 @@ st.title("British Columbia Home and Community Care App For Seniors ")
 st.caption("by lawrence okolo")
 st.image("images/beautiful columbians.webp")
 
-tab0, tab1, tab2, tab3, tab4, tab5 = st.tabs(["Overview","Patients Details","Services", "Booking", "Health Authorities Map", "Database" ])
+tab0, tab1, tab2 = st.columns(["Overview","Patients Details","Services"])
+tab3, tab4, tab5 = st.tabs([ "Booking", "Health Authorities Map", "Database" ])
 
 with tab0:
     st.header("Overview ")
