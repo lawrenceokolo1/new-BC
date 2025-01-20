@@ -538,15 +538,19 @@ if st.button("Show appointment in dataframe "):
     #cursor = conn.cursor()
 
     #Ensure the patients table is empty
-    #cursor.execute("DELETE FROM patients;")
+    #cursor.execute("DELETE FROM appointments;")
 
-    # Reset auto-increment counter for the patients table
-    #cursor.execute("DELETE FROM SQLITE_SEQUENCE WHERE name='patients';")
+     #Reset auto-increment counter for the patients table
+    #cursor.execute("DELETE FROM SQLITE_SEQUENCE WHERE name='appointments';")
+    
 
     #conn.commit()
     #conn.close()
-
+    
 #reset_auto_increment()
+
+
+
 
 
 #def drop():
