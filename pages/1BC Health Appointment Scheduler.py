@@ -164,7 +164,7 @@ def get_service_id(service_name):
 
 st.title("British Columbia Home and Community Care App For Seniors ")
 st.caption("by lawrence okolo")
-st.image("images/beautiful columbians.webp")
+st.image("home care schedular files/beautiful columbians.webp")
 
 #tab0 = st.columns(1)
 #tab1,tab2 = st.columns(2) 

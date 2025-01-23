@@ -8,7 +8,7 @@ from ydata_profiling import ProfileReport
 
 
 st.title("60 Sec CSV for Data Professional")
-st.image("images/humainoid csv.jpg", caption= "Analyse your CSV dataset in 60 seconds")
+st.image("home care schedular files/humainoid csv.jpg", caption= "Analyse your CSV dataset in 60 seconds")
 
 st.subheader("Overview")
 st.markdown("The *60 seconds CSV Report* provides a comprehensive overview of a dataset, enabling data professionals to quickly understand its structure, quality, and key statistics without manual exploration. It saves time and effort, allowing professionals to focus on deriving insights and building models.Feel free to use it by importing a CSV file into it ")
