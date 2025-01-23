@@ -14,7 +14,7 @@ model = joblib.load(model_path)
 
 #load llama model and tokenizer
 
-llama_model_name = "meta-name/Llama-2-7b-chat-hf"
+llama_model_name = "meta-llama/Llama-2-7b-chat-hf"
 
 tokenizer = AutoTokenizer.from_pretrained(llama_model_name)
 llama_model = AutoModelForCausalLM.from_pretrained(llama_model_name, device_map="auto", torch_dtype="float16")
