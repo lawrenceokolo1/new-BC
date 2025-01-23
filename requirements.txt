@@ -79,4 +79,4 @@ ydata-profiling
 joblib
 scikit-learn
 setuptools
-
+transformers
