@@ -4,7 +4,7 @@ import streamlit as st
 st.logo("home care schedular files/obalogop.jpg")
 st.title("welcome to lawrence projects")
 st.caption("A unique portflio")
-st.image("images/data anime.gif", width= 250)
+st.image("home care schedular files/data anime.gif", width= 250)
 
 
 
