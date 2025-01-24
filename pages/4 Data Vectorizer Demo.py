@@ -6,7 +6,9 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
-st.title("Real Time Bed Management(In Progress)")
+st.title("Data Vectoriser pipline(DEMO)")
+st.caption("by lawrence")
+st.image("data vectoriser/datavectorise pipline.webp")
 
 iris_df = pd.read_csv("csv files/iris.csv")
 print(iris_df.head())
