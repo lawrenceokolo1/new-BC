@@ -40,37 +40,47 @@ model = joblib.load(model_path)
 st.header("Diabetes Predictor")
 col1,col2,col3 = st.columns(3)
 with col1:
+    st.subheader("glucose")
     st.image("diabetes files/polyuria.webp")
     glucose = st.number_input("Glucose Level", min_value=0.0, max_value=300.0, value=120.0)
 
 with col2:
+    st.subheader("HbA1c")
     st.image("diabetes files/polyuria.webp")
     hba1c = st.number_input("HbA1c Level", min_value=0.0, max_value=15.0, value=6.0)
 
 with col3:
+    st.subheader("Blood Pressure")
     st.image("diabetes files/polyuria.webp")
     blood_pressure = st.number_input("Blood Pressure", min_value=50.0, max_value=300.0, value=80.0)
 
 col4,col5,col6 = st.columns(3)
 with col4:
+    st.subheader("insulin")
     st.image("diabetes files/polyuria.webp")
     insulin = st.number_input("Insulin Level", min_value=0.0, max_value=500.0, value=100.0)
 with col5:
+    st.subheader("cholesterol")
     st.image("diabetes files/polyuria.webp")
     cholesterol= st.number_input("Cholesterol Level", min_value=0.0, max_value=500.0, value=100.0)
 with col6:
+    st.subheader("age")
     st.image("diabetes files/polyuria.webp")  
     age= st.number_input("age", min_value = 10, max_value=180, value=45)
 
 col7,col8,col9 = st.columns(3)
 with col7:
+    st.subheader("polyuria")
     st.image("diabetes files/polyuria.webp")
     polyuria = st.selectbox("Polyuria(frequent urination)", options=["Yes", "No"])
+
 with col8:
+    st.subheader("polydipsia")
     st.image("diabetes files/polyuria.webp")
     polydipsia = st.selectbox("Polydipsia(excessive thirst)", options=["Yes", "No"])
 
 with col9:
+    st.subheader("BMI")
     st.image("diabetes files/polyuria.webp")
     bmi = st.number_input("body mass", min_value=10.0, max_value=70.0, value=20.0)
 
