@@ -38,15 +38,41 @@ model = joblib.load(model_path)
 
 #streamlit app interface
 st.header("Diabetes Predictor")
-glucose = st.number_input("Glucose Level", min_value=0.0, max_value=300.0, value=120.0)
-hba1c = st.number_input("HbA1c Level", min_value=0.0, max_value=15.0, value=6.0)
-blood_pressure = st.number_input("Blood Pressure", min_value=50.0, max_value=300.0, value=80.0)
-insulin = st.number_input("Insulin Level", min_value=0.0, max_value=500.0, value=100.0)
-cholesterol= st.number_input("Cholesterol Level", min_value=0.0, max_value=500.0, value=100.0)  
-age= st.number_input("age", min_value = 10, max_value=180, value=45)
-polyuria = st.selectbox("Polyuria(frequent urination)", options=["Yes", "No"])
-polydipsia = st.selectbox("Polydipsia(excessive thirst)", options=["Yes", "No"])
-bmi = st.number_input("body mass", min_value=10.0, max_value=70.0, value=20.0)
+col1,col2,col3 = st.columns(3)
+with col1:
+    st.image("diabetes files/polyuria.webp")
+    glucose = st.number_input("Glucose Level", min_value=0.0, max_value=300.0, value=120.0)
+
+with col2:
+    st.image("diabetes files/polyuria.webp")
+    hba1c = st.number_input("HbA1c Level", min_value=0.0, max_value=15.0, value=6.0)
+
+with col3:
+    st.image("diabetes files/polyuria.webp")
+    blood_pressure = st.number_input("Blood Pressure", min_value=50.0, max_value=300.0, value=80.0)
+
+col4,col5,col6 = st.columns(3)
+with col4:
+    st.image("diabetes files/polyuria.webp")
+    insulin = st.number_input("Insulin Level", min_value=0.0, max_value=500.0, value=100.0)
+with col5:
+    st.image("diabetes files/polyuria.webp")
+    cholesterol= st.number_input("Cholesterol Level", min_value=0.0, max_value=500.0, value=100.0)
+with col6:
+    st.image("diabetes files/polyuria.webp")  
+    age= st.number_input("age", min_value = 10, max_value=180, value=45)
+
+col7,col8,col9 = st.columns(3)
+with col7:
+    st.image("diabetes files/polyuria.webp")
+    polyuria = st.selectbox("Polyuria(frequent urination)", options=["Yes", "No"])
+with col8:
+    st.image("diabetes files/polyuria.webp")
+    polydipsia = st.selectbox("Polydipsia(excessive thirst)", options=["Yes", "No"])
+
+with col9:
+    st.image("diabetes files/polyuria.webp")
+    bmi = st.number_input("body mass", min_value=10.0, max_value=70.0, value=20.0)
 
 #convert categorical features to numerical
 polyuria = 1 if polyuria == "yes" else 0
