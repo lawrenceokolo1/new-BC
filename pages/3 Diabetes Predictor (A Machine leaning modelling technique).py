@@ -5,7 +5,7 @@ import numpy as np
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 
-st.title("Diabetes Predictor(In Progress)") 
+st.title("Diabetes Predictor(In Progress, 50% ****)") 
 
 
 st.write('''The Diabetes Predictor Project is a machine learning-based application designed to predict the likelihood of diabetes in patients based on key health metrics and symptoms. Using features such as glucose level, HbA1c, 
