@@ -46,7 +46,7 @@ with col1:
 
 with col2:
     st.subheader("HbA1c")
-    st.image("diabetes files/hba1c.jpeg")
+    st.image("diabetes files/hba1c main.jpeg")
     hba1c = st.number_input("HbA1c Level", min_value=0.0, max_value=15.0, value=6.0)
 
 with col3:
@@ -61,11 +61,11 @@ with col4:
     insulin = st.number_input("Insulin Level", min_value=0.0, max_value=500.0, value=100.0)
 with col5:
     st.subheader("cholesterol")
-    st.image("diabetes files/cholesterol test.jpeg")
+    st.image("diabetes files/Main Scene.gif")
     cholesterol= st.number_input("Cholesterol Level", min_value=0.0, max_value=500.0, value=100.0)
 with col6:
     st.subheader("age")
-    st.image("diabetes files/polyuria.webp")  
+    st.image("diabetes files/Main Scene.gif")  
     age= st.number_input("age", min_value = 10, max_value=180, value=45)
 
 col7,col8,col9 = st.columns(3)
@@ -76,7 +76,7 @@ with col7:
 
 with col8:
     st.subheader("polydipsia")
-    st.image("diabetes files/polyuria.webp")
+    st.image("diabetes files/polydipsia.jpeg")
     polydipsia = st.selectbox("Polydipsia(excessive thirst)", options=["Yes", "No"])
 
 with col9:
