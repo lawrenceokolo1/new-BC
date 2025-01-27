@@ -41,27 +41,27 @@ st.header("Diabetes Predictor")
 col1,col2,col3 = st.columns(3)
 with col1:
     st.subheader("glucose")
-    st.image("diabetes files/polyuria.webp")
+    st.image("diabetes files/glucose level.webp")
     glucose = st.number_input("Glucose Level", min_value=0.0, max_value=300.0, value=120.0)
 
 with col2:
     st.subheader("HbA1c")
-    st.image("diabetes files/polyuria.webp")
+    st.image("diabetes files/hba1c.jpeg")
     hba1c = st.number_input("HbA1c Level", min_value=0.0, max_value=15.0, value=6.0)
 
 with col3:
     st.subheader("Blood Pressure")
-    st.image("diabetes files/polyuria.webp")
+    st.image("diabetes files/bloodpressure.jpeg")
     blood_pressure = st.number_input("Blood Pressure", min_value=50.0, max_value=300.0, value=80.0)
 
 col4,col5,col6 = st.columns(3)
 with col4:
     st.subheader("insulin")
-    st.image("diabetes files/polyuria.webp")
+    st.image("diabetes files/insulin.png")
     insulin = st.number_input("Insulin Level", min_value=0.0, max_value=500.0, value=100.0)
 with col5:
     st.subheader("cholesterol")
-    st.image("diabetes files/polyuria.webp")
+    st.image("diabetes files/cholesterol test.jpeg")
     cholesterol= st.number_input("Cholesterol Level", min_value=0.0, max_value=500.0, value=100.0)
 with col6:
     st.subheader("age")
@@ -71,7 +71,7 @@ with col6:
 col7,col8,col9 = st.columns(3)
 with col7:
     st.subheader("polyuria")
-    st.image("diabetes files/polyuria.webp")
+    st.image("diabetes files/polyuri.jpeg")
     polyuria = st.selectbox("Polyuria(frequent urination)", options=["Yes", "No"])
 
 with col8:
@@ -81,7 +81,7 @@ with col8:
 
 with col9:
     st.subheader("BMI")
-    st.image("diabetes files/polyuria.webp")
+    st.image("diabetes files/bmi.jpeg")
     bmi = st.number_input("body mass", min_value=10.0, max_value=70.0, value=20.0)
 
 #convert categorical features to numerical
