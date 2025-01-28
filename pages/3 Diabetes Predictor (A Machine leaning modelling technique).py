@@ -42,27 +42,27 @@ col1,col2,col3 = st.columns(3)
 with col1:
     st.subheader("glucose")
     st.image("diabetes files/glucose level.webp")
-    glucose = st.number_input("Glucose Level(max_value=300.0)", min_value=0.0, max_value=300.0, value=120.0)
+    glucose = st.number_input("Glucose Level(max_value=300.0)", min_value=0, max_value=300, value=120)
 
 with col2:
     st.subheader("HbA1c")
     st.image("diabetes files/hba1c main.jpeg")
-    hba1c = st.number_input("HbA1c Level (max_value=15)", min_value=0.0, max_value=15.0, value=6.0)
+    hba1c = st.number_input("HbA1c Level (max_value=15)", min_value=0, max_value=15, value=6)
 
 with col3:
     st.subheader("Blood Pressure")
     st.image("diabetes files/bloodpressure.jpeg")
-    blood_pressure = st.number_input("Blood Pressure(max=300.0) ", min_value=50.0, max_value=300.0, value=80.0)
+    blood_pressure = st.number_input("Blood Pressure(max=300.0) ", min_value=50, max_value=300, value=80)
 
 col4,col5,col6 = st.columns(3)
 with col4:
     st.subheader("insulin")
     st.image("diabetes files/insulin.png")
-    insulin = st.number_input("Insulin Level (max=500.0)", min_value=0.0, max_value=500.0, value=100.0)
+    insulin = st.number_input("Insulin Level (max=500.0)", min_value=0, max_value=500, value=100)
 with col5:
     st.subheader("cholesterol")
     st.image("diabetes files/Main Scene.gif")
-    cholesterol= st.number_input("Cholesterol Level", min_value=0.0, max_value=500.0, value=100.0)
+    cholesterol= st.number_input("Cholesterol Level", min_value=0, max_value=500, value=100)
 with col6:
     st.subheader("age")
     st.image("diabetes files/Main Scene.gif")  
@@ -82,7 +82,7 @@ with col8:
 with col9:
     st.subheader("BMI")
     st.image("diabetes files/bmi.jpeg")
-    bmi = st.number_input("body mass", min_value=10.0, max_value=70.0, value=20.0)
+    bmi = st.number_input("body mass", min_value=10, max_value=70, value=20)
 
 #convert categorical features to numerical
 polyuria = 1 if polyuria == "yes" else 0
