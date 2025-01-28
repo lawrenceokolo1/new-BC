@@ -97,6 +97,7 @@ if st.button("predict"):
     prediction_proba = model.predict_proba(features)[0]
 
     #display result and generate recommendation
+    st.write(f"Prediction: {prediction}")
 
     if prediction == 1:
         st.success(f"the patient is likely diabetic with a probability of {prediction_proba[1]*100:.2f}%.")
