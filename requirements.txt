@@ -80,4 +80,3 @@ joblib
 scikit-learn
 setuptools
 transformers
-sentencepiece

@@ -2,7 +2,6 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
-import sentencepiece
 from transformers import LlamaTokenizer, LlamaForCausalLM
 
 st.title("Diabetes Predictor(In Progress, 50% ****)") 
