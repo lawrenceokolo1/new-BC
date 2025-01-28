@@ -90,7 +90,7 @@ polydipsia = 1 if polydipsia == "yes" else 0
 
 if st.button("predict"):
     #combine inputs into a feature array
-    features = np.array([[glucose, hba1c,  insulin, cholesterol, polyuria, polydipsia, bmi]])
+    features = np.array([[bmi, glucose, hba1c,  insulin, cholesterol, polyuria, polydipsia ]])
 
     #make prediction using the diabeties model
     prediction = model.predict(features)[0]
