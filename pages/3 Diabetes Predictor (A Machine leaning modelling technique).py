@@ -12,7 +12,7 @@ st.write('''The Diabetes Predictor Project is a machine learning-based applicati
 blood pressure, insulin, cholesterol, and symptoms like polyuria (frequent urination) and polydipsia (excessive thirst), the model provides a probabilistic classification of whether a patient is diabetic or not.''')
 
 #load the saved model
-model_path = "diabetes files/diabetesmain_model.joblid"
+model_path = "diabetes files/diabetesbest_model.joblid"
 model = joblib.load(model_path)
 
 #load llama model and tokenizer
@@ -90,7 +90,7 @@ polydipsia = 1 if polydipsia == "yes" else 0
 
 if st.button("predict"):
     #combine inputs into a feature array
-    features = np.array([[glucose, hba1c, blood_pressure, insulin, cholesterol, age, polyuria, polydipsia, bmi]])
+    features = np.array([[glucose, hba1c,  insulin, cholesterol, polyuria, polydipsia, bmi]])
 
     #make prediction using the diabeties model
     prediction = model.predict(features)[0]
