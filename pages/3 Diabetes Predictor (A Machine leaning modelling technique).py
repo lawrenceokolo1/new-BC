@@ -2,8 +2,8 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
-from transformers import AutoTokenizer, AutoModelForCausalLM
-
+import sentencepiece
+from transformers import LlamaTokenizer, LlamaForCausalLM
 
 st.title("Diabetes Predictor(In Progress, 50% ****)") 
 st.caption("by lawrence okolo ")
@@ -17,23 +17,24 @@ model = joblib.load(model_path)
 
 #load llama model and tokenizer
 
-#llama_model_name = "meta-llama/Llama-2-7b"
+llama_model_name = "meta-llama/Llama-2-7b"
 
-#tokenizer = AutoTokenizer.from_pretrained(llama_model_name)
-#llama_model = AutoModelForCausalLM.from_pretrained(llama_model_name, device_map="auto", torch_dtype="float16")
+tokenizer = LlamaTokenizer.from_pretrained(llama_model_name)
+
+llama_model = LlamaForCausalLM.from_pretrained(llama_model_name, device_map="auto", torch_dtype="float16")
 
 #function to prompt recommendation
 
-#def get_recommendation(prediction):
-    #if prediction == 1:
-        #prompt = "The patient is likely diabetic. provide a short recommendation for managing diabetes"
-    #else:
-        #prompt= "The patient is not likely diabetic. provide a short recommendation for maintaining a healthy lifestyle"
+def get_recommendation(prediction):
+    if prediction == 1:
+        prompt = "The patient is likely diabetic. provide a short recommendation for managing diabetes"
+    else:
+        prompt= "The patient is not likely diabetic. provide a short recommendation for maintaining a healthy lifestyle"
         
-    #inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
-    #outputs = llama_model.generate(inputs["input_ids"], max_length=100,  temperature=0.7)
-    #response = tokenizer.decode(outputs[0], skip_special_tokens=True)
-    #return response
+    inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+    outputs = llama_model.generate(inputs["input_ids"], max_length=100,  temperature=0.7)
+    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    return response
 
 
 #streamlit app interface
@@ -104,8 +105,8 @@ if st.button("predict"):
     else:
         st.success(f"the patient is not likely diabetic with a probability of {prediction_proba[0]*100:.2f}%.")
     
-    #recommendation = get_recommendation(prediction)
-    #st.info(f"Recommendation: {recommendation}")
+    recommendation = get_recommendation(prediction)
+    st.info(f"Recommendation: {recommendation}")
 
 
    
