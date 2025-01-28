@@ -4,11 +4,10 @@ import pandas as pd
 import numpy as np
 from transformers import LlamaTokenizer, LlamaForCausalLM
 
-st.title("Diabetes Predictor(In Progress, 50% ****)") 
+st.title("Diabetes Predictor") 
 st.caption("by lawrence okolo ")
 
-st.write('''The Diabetes Predictor Project is a machine learning-based application designed to predict the likelihood of diabetes in patients based on key health metrics and symptoms. Using features such as glucose level, HbA1c, 
-blood pressure, insulin, cholesterol, and symptoms like polyuria (frequent urination) and polydipsia (excessive thirst), the model provides a probabilistic classification of whether a patient is diabetic or not.''')
+st.write('''The Diabetes Predictor is a machine learning-based application designed to predict the likelihood of diabetes in patients based on key health metrics and symptoms. Using features such as  glucose level, BMI,  HbA1c, insulin, cholesterol, and symptoms like polyuria (frequent urination) and polydipsia (excessive thirst), the model provides a probabilistic classification of whether a patient is diabetic or not.''')
 
 #load the saved model
 model_path = "diabetes files/diabetesbest_model.joblid"
@@ -42,7 +41,7 @@ col1,col2,col3 = st.columns(3)
 with col1:
     st.subheader("glucose")
     st.image("diabetes files/glucose level.webp")
-    glucose = st.number_input("Glucose Level(max_value=300.0)", min_value=0, max_value=300, value=120)
+    glucose = st.number_input("Glucose Level(max_value=300)", min_value=0, max_value=300, value=120)
 
 with col2:
     st.subheader("HbA1c")
@@ -52,17 +51,17 @@ with col2:
 with col3:
     st.subheader("Blood Pressure")
     st.image("diabetes files/bloodpressure.jpeg")
-    blood_pressure = st.number_input("Blood Pressure(max=300.0) ", min_value=50, max_value=300, value=80)
+    blood_pressure = st.number_input("Blood Pressure(max=300) ", min_value=50, max_value=300, value=80)
 
 col4,col5,col6 = st.columns(3)
 with col4:
     st.subheader("insulin")
     st.image("diabetes files/insulin.png")
-    insulin = st.number_input("Insulin Level (max=500.0)", min_value=0, max_value=500, value=100)
+    insulin = st.number_input("Insulin Level (max=500)", min_value=0, max_value=500, value=100)
 with col5:
     st.subheader("cholesterol")
     st.image("diabetes files/Main Scene.gif")
-    cholesterol= st.number_input("Cholesterol Level", min_value=0, max_value=500, value=100)
+    cholesterol= st.number_input("Cholesterol Level(max=500)", min_value=0, max_value=500, value=100)
 with col6:
     st.subheader("age")
     st.image("diabetes files/Main Scene.gif")  
@@ -82,7 +81,7 @@ with col8:
 with col9:
     st.subheader("BMI")
     st.image("diabetes files/bmi.jpeg")
-    bmi = st.number_input("body mass", min_value=10, max_value=70, value=20)
+    bmi = st.number_input("body mass(max=70)", min_value=10, max_value=70, value=20)
 
 #convert categorical features to numerical
 polyuria = 1 if polyuria == "yes" else 0
@@ -102,7 +101,7 @@ if st.button("predict"):
     if prediction == 1:
         st.success(f"the patient is likely diabetic with a probability of {prediction_proba[1]*100:.2f}%.")
     else:
-        st.success(f"the patient is not likely diabetic with a probability of {prediction_proba[0]*100:.2f}%.")
+        st.success(f"the patient is NOT likely diabetic with a probability of {prediction_proba[0]*100:.2f}%.")
     
     #recommendation = get_recommendation(prediction)
     #st.info(f"Recommendation: {recommendation}")
