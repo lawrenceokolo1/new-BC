@@ -60,7 +60,7 @@ with col4:
     insulin = st.number_input("Insulin Level (max=500)", min_value=0, max_value=500, value=100)
 with col5:
     st.subheader("cholesterol")
-    st.image("diabetes files/Main Scene.gif")
+    st.image("diabetes files/cholesterol test.jpeg")
     cholesterol= st.number_input("Cholesterol Level(max=500)", min_value=0, max_value=500, value=100)
 with col6:
     st.subheader("age")
