@@ -40,7 +40,7 @@ st.header("Diabetes Predictor")
 col1,col2,col3 = st.columns(3)
 with col1:
     st.subheader("glucose")
-    st.image("diabetes files/glucose level.webp")
+    st.image("diabetes files/Main Scene.gif")
     glucose = st.number_input("Glucose Level(max_value=300)", min_value=0, max_value=300, value=120)
 
 with col2:
@@ -50,17 +50,17 @@ with col2:
 
 with col3:
     st.subheader("Blood Pressure")
-    st.image("diabetes files/bloodpressure.jpeg")
+    st.image("diabetes files/turn bowl.gif")
     blood_pressure = st.number_input("Blood Pressure(max=300) ", min_value=50, max_value=300, value=80)
 
 col4,col5,col6 = st.columns(3)
 with col4:
     st.subheader("insulin")
-    st.image("diabetes files/insulin.png")
+    st.image("diabetes files/turn bowl.gif")
     insulin = st.number_input("Insulin Level (max=500)", min_value=0, max_value=500, value=100)
 with col5:
     st.subheader("cholesterol")
-    st.image("diabetes files/Main Scene.gif")
+    st.image("diabetes files/cholesterol test.jpeg")
     cholesterol= st.number_input("Cholesterol Level(max=500)", min_value=0, max_value=500, value=100)
 with col6:
     st.subheader("age")
@@ -70,7 +70,7 @@ with col6:
 col7,col8,col9 = st.columns(3)
 with col7:
     st.subheader("polyuria")
-    st.image("diabetes files/polyuri.jpeg")
+    st.image("diabetes files/Main Scene.gif")
     polyuria = st.selectbox("Polyuria(frequent urination)", options=["Yes", "No"])
 
 with col8:
@@ -80,7 +80,7 @@ with col8:
 
 with col9:
     st.subheader("BMI")
-    st.image("diabetes files/bmi.jpeg")
+    st.image("diabetes files/turn bowl.gif")
     bmi = st.number_input("body mass(max=70)", min_value=10, max_value=70, value=20)
 
 #convert categorical features to numerical
