@@ -70,12 +70,12 @@ with col6:
 col7,col8,col9 = st.columns(3)
 with col7:
     st.subheader("polyuria")
-    st.image("diabetes files/polyuri.jpeg")
+    st.image("diabetes files/Main Scene.gif")
     polyuria = st.selectbox("Polyuria(frequent urination)", options=["Yes", "No"])
 
 with col8:
     st.subheader("polydipsia")
-    st.image("diabetes files/Main Scene.gif")
+    st.image("diabetes files/polydipsia.jpeg")
     polydipsia = st.selectbox("Polydipsia(excessive thirst)", options=["Yes", "No"])
 
 with col9:
