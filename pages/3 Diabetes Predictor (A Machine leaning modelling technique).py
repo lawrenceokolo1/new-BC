@@ -6,6 +6,7 @@ from transformers import LlamaTokenizer, LlamaForCausalLM
 
 st.title("Diabetes Predictor") 
 st.caption("by lawrence okolo ")
+st.image('diabetes files/talk to machine.gif')
 
 st.info('''The Diabetes Predictor is a machine learning-based application designed to predict the likelihood of diabetes in patients based on key health metrics and symptoms. Using features such as  glucose level, BMI,  HbA1c, insulin, cholesterol, and symptoms like polyuria (frequent urination) and polydipsia (excessive thirst), the model provides a probabilistic classification of whether a patient is diabetic or not.''')
 
