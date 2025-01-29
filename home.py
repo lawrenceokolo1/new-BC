@@ -19,13 +19,13 @@ with col1:
 
 
 with col2:
-     st.markdown("#### [3. Diabetics predictor ](https://lawrence-project.streamlit.app/Diabetes_Predictor_(A_Machine_leaning_modelling_technique))")
+     st.markdown("#### [2. Diabetics predictor ](https://lawrence-project.streamlit.app/Diabetes_Predictor_(A_Machine_leaning_modelling_technique))")
      st.image("diabetes files/diabetic predictor.webp")
     
 col3, col4 = st.columns(2)
 
 with col3:
-    st.markdown("#### [2. 60 seconds CSV Analysis](https://lawrence-project.streamlit.app/60sec_CSV_analysis)")
+    st.markdown("#### [3. 60 seconds CSV Analysis](https://lawrence-project.streamlit.app/60sec_CSV_analysis)")
     st.image("home care schedular files/humainoid csv.jpg")
    
    
