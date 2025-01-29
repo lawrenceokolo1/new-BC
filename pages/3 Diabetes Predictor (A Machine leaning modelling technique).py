@@ -40,7 +40,7 @@ st.header("Diabetes Predictor")
 col1,col2,col3 = st.columns(3)
 with col1:
     st.subheader("glucose")
-    st.image("diabetes files/glucose level.webp")
+    st.image("diabetes files/Main Scene.gif")
     glucose = st.number_input("Glucose Level(max_value=300)", min_value=0, max_value=300, value=120)
 
 with col2:
