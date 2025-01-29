@@ -80,7 +80,7 @@ with col8:
 
 with col9:
     st.subheader("BMI")
-    st.image("diabetes files/bmi.jpeg")
+    st.image("diabetes files/turn bowl.gif")
     bmi = st.number_input("body mass(max=70)", min_value=10, max_value=70, value=20)
 
 #convert categorical features to numerical
