@@ -50,13 +50,13 @@ with col2:
 
 with col3:
     st.subheader("Blood Pressure")
-    st.image("diabetes files/bloodpressure.jpeg")
+    st.image("diabetes files/turn bowl.gif")
     blood_pressure = st.number_input("Blood Pressure(max=300) ", min_value=50, max_value=300, value=80)
 
 col4,col5,col6 = st.columns(3)
 with col4:
     st.subheader("insulin")
-    st.image("diabetes files/insulin.png")
+    st.image("diabetes files/turn bowl.gif")
     insulin = st.number_input("Insulin Level (max=500)", min_value=0, max_value=500, value=100)
 with col5:
     st.subheader("cholesterol")
