@@ -75,7 +75,7 @@ with col7:
 
 with col8:
     st.subheader("polydipsia")
-    st.image("diabetes files/polydipsia.jpeg")
+    st.image("diabetes files/Main Scene.gif")
     polydipsia = st.selectbox("Polydipsia(excessive thirst)", options=["Yes", "No"])
 
 with col9:
