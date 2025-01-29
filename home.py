@@ -10,7 +10,6 @@ st.image("home care schedular files/data anime.gif", width= 250)
 
 
 st.markdown("# projects")
-st.info("use the widget at the left to access all projects")
 
 col1, col2 = st.columns(2)
 
@@ -21,7 +20,7 @@ with col1:
 
 with col2:
      st.markdown("#### [3. Diabetics predictor ](https://lawrence-project.streamlit.app/Diabetes_Predictor_(A_Machine_leaning_modelling_technique))")
-    st.image("diabetes files/diabetic predictor.webp")
+     st.image("diabetes files/diabetic predictor.webp")
     
 col3, col4 = st.columns(2)
 
