@@ -4,7 +4,11 @@ import streamlit as st
 st.logo("home care schedular files/obalogop.jpg")
 st.title("welcome to lawrence projects")
 st.caption("A unique portflio")
-st.image("home care schedular files/data anime.gif", width= 250)
+colx, coly = st.columns(2)
+with colx:
+    st.image("home care schedular files/data anime.gif", width= 250)
+with coly:
+    st.image('diabetes files/talk to machine.gif')
 
 
 
