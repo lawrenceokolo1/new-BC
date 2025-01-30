@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
-from transformers import LlamaTokenizer, LlamaForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
 st.title("Diabetes Predictor") 
 st.caption("by lawrence okolo ")
@@ -17,9 +17,9 @@ model = joblib.load(model_path)
 
 #llama_model_name = "meta-llama/Llama-2-7b"
 
-#tokenizer = LlamaTokenizer.from_pretrained(llama_model_name)
+#tokenizer =  AutoTokenizer.from_pretrained(llama_model_name)
 
-#llama_model = LlamaForCausalLM.from_pretrained(llama_model_name, device_map="auto", torch_dtype="float16")
+#llama_model = AutoModelForCausalLM.from_pretrained(llama_model_name, device_map="auto", torch_dtype="float16")
 
 #function to prompt recommendation
 
