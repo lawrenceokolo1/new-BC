@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
-from transformers import AutoTokenizer, AutoModelForCausalLM
+#from transformers import AutoTokenizer, AutoModelForCausalLM
 
 st.title("Diabetes Predictor") 
 st.caption("by lawrence okolo ")
@@ -13,7 +13,7 @@ st.info('''The Diabetes Predictor is a machine learning-based application design
 model_path = "diabetes files/diabetesNbest_model.joblid"
 model = joblib.load(model_path)
 
-#load llama model and tokenizer
+#load llama model and tokenizer(Intergrate to add llama text model)
 
 #llama_model_name = "meta-llama/Llama-2-7b"
 
@@ -37,6 +37,8 @@ model = joblib.load(model_path)
 
 #streamlit app interface
 st.header("Diabetes Predictor")
+
+#create column for the first three columns
 col1,col2,col3 = st.columns(3)
 with col1:
     st.subheader("glucose")
@@ -53,6 +55,7 @@ with col3:
     st.image("diabetes files/turn bowl.gif")
     blood_pressure = st.number_input("Blood Pressure(max=300) ", min_value=50, max_value=300, value=80)
 
+#create the second three columns
 col4,col5,col6 = st.columns(3)
 with col4:
     st.subheader("insulin")
@@ -67,6 +70,7 @@ with col6:
     st.image("diabetes files/Main Scene.gif")  
     age= st.number_input("age", min_value = 10, max_value=180, value=45)
 
+#create the third three columns
 col7,col8,col9 = st.columns(3)
 with col7:
     st.subheader("polyuria")
@@ -87,6 +91,7 @@ with col9:
 polyuria = 1 if polyuria == "yes" else 0
 polydipsia = 1 if polydipsia == "yes" else 0
 
+#create predict button and interpret your result
 if st.button("predict"):
     #combine inputs into a feature array
     features = np.array([[bmi, glucose, hba1c,  insulin, cholesterol, polyuria, polydipsia ]])
@@ -102,7 +107,8 @@ if st.button("predict"):
         st.success(f"the patient is likely diabetic with a probability of {prediction_proba[1]*100:.2f}%.")
     else:
         st.success(f"the patient is NOT likely diabetic with a probability of {prediction_proba[0]*100:.2f}%.")
-    
+
+#get recommendation from llama 2-7b model 
     #recommendation = get_recommendation(prediction)
     #st.info(f"Recommendation: {recommendation}")
 
