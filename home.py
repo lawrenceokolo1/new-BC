@@ -19,7 +19,7 @@ with col1:
 
 
 with col2:
-     st.markdown("#### [2. Diabetics predictor ](https://lawrence-project.streamlit.app/DiabetesPredictor(Applied_Machine_Intelligence))")
+     st.markdown("#### [2. Diabetics predictor ](https://lawrence-project.streamlit.app/Diabetes_Predictor)")
      st.image("diabetes files/diabetic predictor.webp")
     
 col3, col4 = st.columns(2)
