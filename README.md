@@ -1,6 +1,4 @@
-# Lawrence Projects Portfolio
-
-A unique portfolio showcasing multiple data science and healthcare applications built with Streamlit.
+#healthcare applications 
 
 ## 🚀 Live Demo
 
@@ -8,7 +6,7 @@ Visit the live application: [https://lawrence-project.streamlit.app](https://law
 
 ## 📋 Overview
 
-This portfolio contains a collection of interactive web applications focused on healthcare management, data analysis, and machine learning. The main application serves as a hub to navigate between different projects.
+
 
 ## 🎯 Projects
 
@@ -122,9 +120,7 @@ See `requirements.txt` for the complete list of dependencies. Key packages inclu
 - ydata-profiling
 - pandas-profiling
 
-## 👤 Author
 
-**Lawrence Okolo**
 
 ## 📄 License
 
@@ -140,3 +136,4 @@ This project is part of a personal portfolio.
 ---
 
 *Last updated: 2024*
+
